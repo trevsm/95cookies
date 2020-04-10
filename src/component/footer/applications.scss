@@ -1,0 +1,16 @@
+.applications {
+  display: flex;
+
+  width: 100%;
+  min-width: 100px;
+  .btn {
+    overflow: hidden;
+
+    width: 100%;
+    max-width: 260px;
+    padding-left: 10px;
+
+    cursor: pointer;
+    text-overflow: ellipsis;
+  }
+}

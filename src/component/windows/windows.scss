@@ -1,0 +1,33 @@
+.window {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width:fit-content;
+  resize: both;
+  min-width: 150px;
+  min-height: 100px;
+  overflow: auto;
+  .header{
+      padding:2px 5px;
+      display:flex;
+      font-size: 15px;
+      pointer-events: none;
+      background-color: #808080;
+  }
+  .header.top{
+      background-color: #000080;
+      color:white;
+  }
+}
+
+.closeBtn{
+  pointer-events: all;
+  position:absolute;
+  right:3px;
+  width:fit-content;
+  padding:3px;
+  height:15px;
+  line-height: 5px;
+  margin:3px
+}
