@@ -10,7 +10,7 @@ function Windows() {
 
     return (
         <>
-            {
+            {   
                 Object.keys(c.windows).map((key, index) => {
                     let pos;
                     for (let i = 0; i < c.windowOrder.length; i++) {

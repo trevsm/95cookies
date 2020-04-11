@@ -10,37 +10,69 @@ import "./scss/main.scss"
 
 function App() {
 
-  if(window.localStorage.getItem("windows")){
-    window.localStorage.setItem("windows", "{}")
-  }
-  
+  const [windows, setWindows] = useState(0)
 
-  const [windows, setWindows] = useState(
-    {
-      "explorer": {
-        title: "Explorer.exe"
-      },
-      "welcome": {
-        title: "Welcome"
-      },
-      "asdf": {
-        title: "yolo"
-      }
-    }
-  )
-
-  const [windowOrder, setWindowOrder] = useState(
-    ["explorer", "asdf", "welcome"]
-  )
+  const [windowOrder, setWindowOrder] = useState(0)
 
   const [menuStatus, setMenuStatus] = useState(false)
 
-  
 
-  useEffect(()=>{
-    
-    console.log("mounted")
+  const seedLocalStorage = (p = true) => {
+    if (p) {
+      window.localStorage.setItem("windows", JSON.stringify(
+        {
+          windows: {
+            "welcome": {
+              title: "Welcome"
+            }
+          }
+        }
+      ))
+
+      window.localStorage.setItem("order", JSON.stringify(
+        { order: ["welcome"] }
+      ))
+
+    }
+    else {
+      window.localStorage.setItem("windows", JSON.stringify(
+        {
+          windows: {}
+        }
+      ))
+
+      window.localStorage.setItem("order", JSON.stringify(
+        { order: [] }
+      ))
+    }
+  }
+
+  const localStorageExists = () => {
+    return (
+      window.localStorage.getItem("windows")
+    )
+  }
+
+
+  const syncLocalStorage = () => {
+    if (!localStorageExists()) {
+      seedLocalStorage(false)
+    }
+
+    let winAll = window.localStorage.getItem("windows")
+    winAll = JSON.parse(winAll)
+
+    let ordAll = window.localStorage.getItem("order")
+    ordAll = JSON.parse(ordAll)
+
+    setWindows(winAll["windows"])
+    setWindowOrder(ordAll["order"])
+  }
+
+  useEffect(() => {
+    syncLocalStorage()
   }, [])
+
   return (
     <Context.Provider value={{
       windows: windows, setWindows: setWindows,
