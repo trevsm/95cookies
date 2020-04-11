@@ -14,17 +14,23 @@ function App() {
 
   const [windowOrder, setWindowOrder] = useState(0)
 
+  const [windowPos, setWindowPos] = useState(0)
+
   const [menuStatus, setMenuStatus] = useState(false)
 
   const getLocal = (category) => {
     let elem = window.localStorage.getItem(category)
-    return (elem?(JSON.parse(elem))[category]:false)
+    return (elem ? (JSON.parse(elem))[category] : false)
   }
 
   const setLocal = (category, value) => {
     window.localStorage.setItem(category, JSON.stringify(
       { [category]: value }
     ))
+  }
+
+  const getItem = (category, name) => {
+    return getLocal(category)[name]
   }
 
   const addItem = (name, value) => {
@@ -43,7 +49,8 @@ function App() {
   const deleteItem = (item) => {
     let windows = getLocal("windows")
     let order = getLocal("order")
-    
+    let position = getLocal("position")
+
     //delete item in window list
     delete windows[item]
 
@@ -52,10 +59,11 @@ function App() {
     order.splice(index, 1)
 
     //delete item position
-    window.localStorage.removeItem(item)
+    delete position[item]
 
     setLocal("windows", windows)
     setLocal("order", order)
+    setLocal("position", position)
 
     syncStateWithLocal()
   }
@@ -64,10 +72,22 @@ function App() {
     if (p) {
       setLocal("windows", { "welcome": { title: "Welcome" } })
       setLocal("order", ["welcome"])
+      setLocal("position", {
+        "welcome": {
+          active: false,
+          currentX: 0,
+          currentY: 0,
+          initialX: 0,
+          initialY: 0,
+          xOffset: 0,
+          yOffset: 0
+        }
+      })
     }
     else {
       setLocal("windows", {})
       setLocal("order", [])
+      setLocal("position", {})
     }
   }
 
@@ -83,11 +103,11 @@ function App() {
     }
     setWindows(getLocal("windows"))
     setWindowOrder(getLocal("order"))
+    setWindowPos(getLocal("position"))
   }
 
   useEffect(() => {
     syncStateWithLocal()
-
   }, [])
 
   return (
@@ -95,7 +115,8 @@ function App() {
       windows: windows, setWindows: setWindows,
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
       windowOrder: windowOrder, setWindowOrder: setWindowOrder,
-      addItem: addItem, deleteItem: deleteItem
+      windowPos: windowPos, addItem: addItem,
+      getItem: getItem, deleteItem: deleteItem
     }}>
       <section className="hero is-success is-fullheight">
         <div className="hero-body">
