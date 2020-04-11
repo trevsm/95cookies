@@ -98,13 +98,13 @@ function Window(props) {
             data-id={props.id}
             onMouseDown={(e) => {
                 e.persist()
-                dragStart(e, e.target)
+                dragStart(e, document.getElementById(props.id))
 
                 if (notOnTheTop())
                     topWindow(e)
             }}
             onMouseUp={dragEnd}
-            onMouseMove={(e) => { drag(e, e.target) }}
+            onMouseMove={(e) => { drag(e, document.getElementById(props.id)) }}
             onMouseLeave={dragEnd}
             style={{ zIndex: props.pos, transform: "translate3d(" + w["currentX"] + "px, " + w["currentY"] + "px, 0)" }}
         >

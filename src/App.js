@@ -16,68 +16,86 @@ function App() {
 
   const [menuStatus, setMenuStatus] = useState(false)
 
+  const getLocal = (category) => {
+    let elem = window.localStorage.getItem(category)
+    return (elem?(JSON.parse(elem))[category]:false)
+  }
+
+  const setLocal = (category, value) => {
+    window.localStorage.setItem(category, JSON.stringify(
+      { [category]: value }
+    ))
+  }
+
+  const addItem = (name, value) => {
+    let windows = getLocal("windows")
+    let order = getLocal("order")
+
+    windows[name] = value
+    order.unshift("item")
+
+    setLocal("windows", windows)
+    setLocal("order", order)
+
+    syncStateWithLocal()
+  }
+
+  const deleteItem = (item) => {
+    let windows = getLocal("windows")
+    let order = getLocal("order")
+    
+    //delete item in window list
+    delete windows[item]
+
+    //delete item in order
+    let index = order.indexOf(item)
+    order.splice(index, 1)
+
+    //delete item position
+    window.localStorage.removeItem(item)
+
+    setLocal("windows", windows)
+    setLocal("order", order)
+
+    syncStateWithLocal()
+  }
 
   const seedLocalStorage = (p = true) => {
     if (p) {
-      window.localStorage.setItem("windows", JSON.stringify(
-        {
-          windows: {
-            "welcome": {
-              title: "Welcome"
-            }
-          }
-        }
-      ))
-
-      window.localStorage.setItem("order", JSON.stringify(
-        { order: ["welcome"] }
-      ))
-
+      setLocal("windows", { "welcome": { title: "Welcome" } })
+      setLocal("order", ["welcome"])
     }
     else {
-      window.localStorage.setItem("windows", JSON.stringify(
-        {
-          windows: {}
-        }
-      ))
-
-      window.localStorage.setItem("order", JSON.stringify(
-        { order: [] }
-      ))
+      setLocal("windows", {})
+      setLocal("order", [])
     }
   }
 
   const localStorageExists = () => {
     return (
-      window.localStorage.getItem("windows")
+      getLocal("windows")
     )
   }
 
-
-  const syncLocalStorage = () => {
+  const syncStateWithLocal = () => {
     if (!localStorageExists()) {
-      seedLocalStorage(false)
+      seedLocalStorage()
     }
-
-    let winAll = window.localStorage.getItem("windows")
-    winAll = JSON.parse(winAll)
-
-    let ordAll = window.localStorage.getItem("order")
-    ordAll = JSON.parse(ordAll)
-
-    setWindows(winAll["windows"])
-    setWindowOrder(ordAll["order"])
+    setWindows(getLocal("windows"))
+    setWindowOrder(getLocal("order"))
   }
 
   useEffect(() => {
-    syncLocalStorage()
+    syncStateWithLocal()
+
   }, [])
 
   return (
     <Context.Provider value={{
       windows: windows, setWindows: setWindows,
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
-      windowOrder: windowOrder, setWindowOrder: setWindowOrder
+      windowOrder: windowOrder, setWindowOrder: setWindowOrder,
+      addItem: addItem, deleteItem: deleteItem
     }}>
       <section className="hero is-success is-fullheight">
         <div className="hero-body">

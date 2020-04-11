@@ -3,11 +3,7 @@ import React from "react"
 function Close(props) {
 
     const closeWindow = () => {
-        let temp = {...props.c.windows}
-        delete temp[props.id]
-        console.log(temp)
-        props.c.setWindows(temp)
-        window.localStorage.removeItem([props.id])
+        props.c.deleteItem(props.id)
     }
 
     return (
