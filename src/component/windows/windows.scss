@@ -2,6 +2,7 @@
   position: absolute;
   left: 0;
   right: 0;
+  top: 50px;
   margin: 0 auto;
   width:fit-content;
   min-width: fit-content;
@@ -17,15 +18,17 @@
       background-color: #000080;
       color:white;
   }
+  .title{
+    padding:20px;
+    margin:0 !important;
+    width:fit-content;
+    color:black !important;
+  }
   .main-content{
     max-width:600px;
     width:600px;
     padding:25px;
     margin:unset;
-    .title{
-      width:fit-content;
-      color:black !important;
-    }
     .main{
       display:flex;
       .left, .right{

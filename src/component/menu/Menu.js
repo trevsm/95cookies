@@ -20,7 +20,7 @@ function Menu() {
                         <div 
                         className="item" 
                         key={index}
-                        onClick={()=>c.addItem(key)}
+                        onMouseDown={()=>c.addItem(key)}
                         >
                             <Icon path={item.icon} />
                             <div className="text">

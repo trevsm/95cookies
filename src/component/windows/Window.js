@@ -18,7 +18,7 @@ function Window(props) {
               yOffset: 0
             }
 
-    const topWindow = (e) => {
+    const topWindow = () => {
         console.log("top!")
         props.c.editItem("order", props.id)
     }
@@ -102,13 +102,16 @@ function Window(props) {
                     c={c} w={w}
                 />
             </header>
+            <h1 className = "title">
+                {c.data[props.id].subtitle}
+            </h1>
             {
                 (c.data[props.id].content).map((val, index) => {
                     return (
                         <div className="main-content" key={index}>
-                            <div className="title">
+                            <h2 className="main-title">
                                 {val.title}
-                            </div>
+                            </h2>
                             <div className="main ">
                                 <div className="left in-border-soft yellow">
                                     <div className="description">

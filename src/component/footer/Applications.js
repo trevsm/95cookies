@@ -7,18 +7,8 @@ function Applications() {
 
 
     const topWindow = (e) => {
-        e.persist()
         let id = e.target.getAttribute("data-id")
-
-        let temp = [ ...c.windowOrder ]
-
-        let index = temp.indexOf(id)
-
-        temp.splice(index, 1)
-
-        temp.push(id)
-
-        c.setWindowOrder(temp)
+        c.editItem("order", id)
     }
 
     return (

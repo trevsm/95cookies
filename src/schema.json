@@ -1,11 +1,11 @@
 {
   "welcome": {
     "application": "Welcome",
-    "icon": "start.png",
+    "icon": "cookie.png",
+    "subtitle": "Welcome to 95Cookies!",
     "content": [
       {
-        "title": "Welcome to 95Cookies!",
-        "subtitle": "Find recipes for the food you forgot ever existed.",
+        "title": "Find recipes for the food you forgot existed.",
         "image": "/[path-to-image]",
         "description": "just a super long description",
         "steps":["step1", "step2"]
@@ -53,7 +53,7 @@
   "fizz": {
     "application": "Fancy Fizz",
     "icon": "drink.gif",
-    "subtitle": "pop pop fizz fizz...",
+    "subtitle": "pop pop fizz fizz... yup its soda",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
@@ -72,7 +72,7 @@
   "fruit": {
     "application": "Juicy Fruit",
     "icon": "grapes.gif",
-    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "subtitle": "So good you can almost taste it!",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
@@ -91,7 +91,7 @@
   "all": {
     "application": "All Recipes",
     "icon": "scroll.png",
-    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "subtitle": "EVERY RECIPE EVER... I wish lol",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
