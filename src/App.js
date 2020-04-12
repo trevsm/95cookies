@@ -34,32 +34,34 @@ function App() {
   }
 
   const editItem = (category, name, value) => {
-    switch (category) {
-      case "windows":
-        let windows = getLocal("windows")
+    if (localStorageExists()) {
+      switch (category) {
+        case "windows":
+          let windows = getLocal("windows")
 
-        windows[name] = value
-        setLocal("windows", windows)
-        break;
+          windows[name] = value
+          setLocal("windows", windows)
+          break;
 
-      case "order":
-        let order = getLocal("order"),
-          orderIndex = order.indexOf(name)
+        case "order":
+          let order = getLocal("order"),
+            orderIndex = order.indexOf(name)
 
-        if (orderIndex === -1) {
-          order.unshift(name)
-          setLocal("order", order)
-        }
-        break;
+          if (orderIndex === -1) {
+            order.unshift(name)
+            setLocal("order", order)
+          }
+          break;
 
-      case "position":
-        let position = getLocal("position")
-        position[name] = value
-        setLocal("position", position)
-        break;
+        case "position":
+          let position = getLocal("position")
+          position[name] = value
+          setLocal("position", position)
+          break;
 
-      default:
-        window.Error("Item type does not exist.")
+        default:
+          window.Error("Item type does not exist.")
+      }
     }
     syncStateWithLocal()
   }
