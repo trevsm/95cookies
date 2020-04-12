@@ -7,18 +7,20 @@ function Window(props) {
 
     let w = c.getItem("position", [props.id])
 
+    if(!w)
+        w = {
+              active: false,
+              currentX: 0,
+              currentY: 0,
+              initialX: 0,
+              initialY: 0,
+              xOffset: 0,
+              yOffset: 0
+            }
+
     const topWindow = (e) => {
-        let id = e.target.getAttribute("data-id")
-
-        let temp = [...c.windowOrder]
-
-        let index = temp.indexOf(id)
-
-        temp.splice(index, 1)
-
-        temp.push(id)
-
-        c.setWindowOrder(temp)
+        console.log("top!")
+        props.c.editItem("order", props.id)
     }
 
     const dragStart = (e, dragItem) => {
@@ -85,6 +87,8 @@ function Window(props) {
 
                 if (notOnTheTop())
                     topWindow(e)
+
+                props.c.editItem("position", props.id, w)
             }}
             onMouseUp={dragEnd}
             onMouseMove={(e) => { drag(e, document.getElementById(props.id)) }}
@@ -92,13 +96,43 @@ function Window(props) {
             style={{ zIndex: props.pos, transform: "translate3d(" + w["currentX"] + "px, " + w["currentY"] + "px, 0)" }}
         >
             <header className={`header${!notOnTheTop() ? " top" : ""}`}>
-                {props.title}
-                <Close 
-                id={props.id} 
-                c={c} w={w}
+                {c.data[props.id].application}
+                <Close
+                    id={props.id}
+                    c={c} w={w}
                 />
             </header>
-
+            {
+                (c.data[props.id].content).map((val, index) => {
+                    return (
+                        <div className="main-content" key={index}>
+                            <div className="title">
+                                {val.title}
+                            </div>
+                            <div className="main ">
+                                <div className="left in-border-soft yellow">
+                                    <div className="description">
+                                        {val.description}
+                                    </div>
+                                    <ul>
+                                    {
+                                        (val.steps).map((val, index)=>{
+                                            return(
+                                            <li key = {index}>{val}</li>)
+                                        })
+                                    }
+                                    </ul>
+                                </div>
+                                <div className="right">
+                                    <div className="image">
+                                        <img src="#" alt="image3" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }

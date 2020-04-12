@@ -49,10 +49,13 @@ function App() {
           let order = getLocal("order"),
             orderIndex = order.indexOf(name)
 
-          if (orderIndex === -1) {
-            order.unshift(name)
-            setLocal("order", order)
+          if (orderIndex !== -1) {
+            console.log(order)
+            console.log(order.splice(orderIndex, 1))
+            console.log(order.push(name))
           }
+
+          setLocal("order", order)
           break;
 
         case "position":
@@ -68,6 +71,21 @@ function App() {
     syncStateWithLocal()
   }
 
+  const addItem = (name) => {
+    if (localStorageExists() && !itemAlreadyExists(name)) {
+      let windows = getLocal("windows")
+      let order = getLocal("order")
+
+      windows[name] = { title: name }
+      order.unshift(name)
+
+      setLocal("windows", windows)
+      setLocal("order", order)
+
+      syncStateWithLocal()
+    }
+  }
+
   const deleteItem = (item) => {
     let windows = getLocal("windows")
     let order = getLocal("order")
@@ -78,6 +96,7 @@ function App() {
 
     //delete item in order
     let index = order.indexOf(item)
+
     order.splice(index, 1)
 
     //delete item position
@@ -119,6 +138,14 @@ function App() {
     )
   }
 
+  const itemAlreadyExists = (name) => {
+    if (localStorageExists())
+      return (
+        getItem("windows", name)
+      )
+    else return false
+  }
+
   const syncStateWithLocal = () => {
     if (!localStorageExists()) {
       seedLocalStorage()
@@ -137,9 +164,9 @@ function App() {
       windows: windows, setWindows: setWindows,
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
       windowOrder: windowOrder, setWindowOrder: setWindowOrder,
-      windowPos: windowPos, editItem: editItem,
+      windowPos: windowPos, editItem: editItem, addItem: addItem,
       getItem: getItem, deleteItem: deleteItem,
-      data:data
+      data: data
     }}>
       <section className="hero is-success is-fullheight">
         <div className="hero-body">

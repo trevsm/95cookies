@@ -15,14 +15,19 @@ function Menu() {
                 {
                     Object.keys(c.data).map((key, index) => {
                         let item = c.data[key]
-                        let title = item["title"]
+                        let application = item["application"]
                         return(
-                        <div className="item" key={index}>
+                        <div 
+                        className="item" 
+                        key={index}
+                        onClick={()=>c.addItem(key)}
+                        >
                             <Icon path={item.icon} />
                             <div className="text">
                                 <span className="underline">
-                                {title.substr(0, 1)}
-                                </span>{title.substr(1, title.length-1)}
+                                {application.substr(0, 1)}
+                                </span>
+                                {application.substr(1, application.length-1)}
                             </div>
                         </div>)
                     })

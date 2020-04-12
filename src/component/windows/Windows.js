@@ -25,6 +25,7 @@ function Windows() {
                                 pos={pos}
                                 id={key}
                                 index={index}
+                                c={c}
                                 temp={c.windows}
                                 title={c.windows[key].title}
                                  />
