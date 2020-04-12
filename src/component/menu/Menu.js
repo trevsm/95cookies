@@ -1,6 +1,6 @@
 import React, { useContext } from "react"
 import { Context } from "../context/Context"
-import { Scroll, Donut, Pizza, Drink, Fruit } from "../icons/Icons"
+import Icon from "../icons/Icons"
 
 import "./menu.scss"
 
@@ -13,33 +13,9 @@ function Menu() {
             </div>
             <div className="menu-list">
                 <div className="item">
-                    <Donut />
+                    <Icon path={""} />
                     <div className="text">
                         <span className="underline">T</span>asty Treats
-                    </div>
-                </div>
-                <div className="item">
-                    <Pizza />
-                    <div className="text">
-                        <span className="underline">S</span>avory Bites
-                    </div>
-                </div>
-                <div className="item">
-                    <Drink />
-                    <div className="text">
-                        <span className="underline">F</span>ancy Fizz
-                    </div>
-                </div>
-                <div className="item">
-                    <Fruit />
-                    <div className="text">
-                        <span className="underline">J</span>uicy Fruits
-                    </div>
-                </div>
-                <div className="item">
-                    <Scroll />
-                    <div className="text">
-                        <span className="underline">A</span>ll Recipes
                     </div>
                 </div>
             </div>

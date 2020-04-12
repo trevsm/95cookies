@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react"
 import { Context } from "../context/Context"
-import { Flag } from "../icons/Icons"
+import Icon from "../icons/Icons"
 import "./start.scss"
 
 function Start() {
@@ -32,7 +32,7 @@ function Start() {
             onMouseDown={(e) => { push(e) }}
             onBlur={pull}
         >
-            <Flag />
+            <Icon path={c.data["welcome"].icon}/>
             <div className="content">
                 Start
             </div>

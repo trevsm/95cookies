@@ -5,6 +5,8 @@ import Menu from "./component/menu/Menu"
 import Windows from "./component/windows/Windows"
 import { Context } from "./component/context/Context"
 
+import data from "./schema.json"
+
 import "bulma/bulma.sass"
 import "./scss/main.scss"
 
@@ -136,7 +138,8 @@ function App() {
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
       windowOrder: windowOrder, setWindowOrder: setWindowOrder,
       windowPos: windowPos, editItem: editItem,
-      getItem: getItem, deleteItem: deleteItem
+      getItem: getItem, deleteItem: deleteItem,
+      data:data
     }}>
       <section className="hero is-success is-fullheight">
         <div className="hero-body">
