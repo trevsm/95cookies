@@ -7,8 +7,6 @@ function Window(props) {
 
     let w = c.getItem("position", [props.id])
 
-    console.log(w)
-
     const topWindow = (e) => {
         let id = e.target.getAttribute("data-id")
 
@@ -27,8 +25,6 @@ function Window(props) {
         w["initialX"] = e.clientX - w["xOffset"];
         w["initialY"] = e.clientY - w["yOffset"];
 
-        //console.log(getTranslate3d(dragItem)[0], getTranslate3d(dragItem)[1])
-
         if (e.target === dragItem) {
             w["active"] = true;
         }
@@ -40,8 +36,6 @@ function Window(props) {
         w["initialY"] = w["currentY"];
 
         w["active"] = false
-
-        console.log(w)
         c.editItem("position", props.id, w)
     }
 

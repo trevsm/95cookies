@@ -1,57 +1,138 @@
 {
-  "welcome":{
-      "title": "Welcome to my blog!",
-      "icon": "start.png",
-      "subtitle": "Find recipes for the food you forgot ever existed.",
-      "content": ["example content"]
-    },
-    "sweet":{
-      "title": "Tasty Treats",
-      "icon": "",
-      "subtitle": "Gimme some of that swEEt swEEt sugar!",
-      "content": [
-        {
-          "title": "[Sweet Recipe Name 1]",
-          "image": "/[path-to-image]",
-          "steps": ["step 1", "step 2", "step 3", "step 4", "step 5"]
-        },
-        {
-          "title": "[Sweet Recipe Name 2]",
-          "image": "/[path-to-image]",
-          "steps": [
-            "beat an egg",
-            "eat some butter",
-            "chew on a cookie",
-            "visit a website"
-          ]
-        }
-      ]
-    },
-    "savory":{
-      "title": "Savory Bites",
-      "icon": "pizza.gif",
-      "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
-      "content": [
-        {
-          "title": "[Savory Recipe Name 1]",
-          "image": "/[path-to-image]",
-          "steps": [
-            "look at a pig",
-            "eat some bacon",
-            "drink some orange juice",
-            "thank that pig"
-          ]
-        },
-        {
-          "title": "[Savory Recipe Name 2]",
-          "image": "/[path-to-image]",
-          "steps": [
-            "look at a pig",
-            "eat some bacon",
-            "drink some orange juice",
-            "thank that pig"
-          ]
-        }
-      ]
-    }
+  "welcome": {
+    "title": "Welcome",
+    "icon": "start.png",
+    "subtitle": "Find recipes for the food you forgot ever existed.",
+    "content": ["example content"]
+  },
+  "sweet": {
+    "title": "Tasty Treats",
+    "icon": "donut.gif",
+    "subtitle": "Gimme some of that swEEt swEEt sugar!",
+    "content": [
+      {
+        "title": "[Sweet Recipe Name 1]",
+        "image": "/[path-to-image]",
+        "steps": ["step 1", "step 2", "step 3", "step 4", "step 5"]
+      },
+      {
+        "title": "[Sweet Recipe Name 2]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "beat an egg",
+          "eat some butter",
+          "chew on a cookie",
+          "visit a website"
+        ]
+      }
+    ]
+  },
+  "savory": {
+    "title": "Savory Bites",
+    "icon": "pizza.gif",
+    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "content": [
+      {
+        "title": "[Savory Recipe Name 1]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      },
+      {
+        "title": "[Savory Recipe Name 2]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      }
+    ]
+  },
+  "four": {
+    "title": "Savory Bites",
+    "icon": "pizza.gif",
+    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "content": [
+      {
+        "title": "[Savory Recipe Name 1]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      },
+      {
+        "title": "[Savory Recipe Name 2]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      }
+    ]
+  },
+  "five": {
+    "title": "Savory Bites",
+    "icon": "pizza.gif",
+    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "content": [
+      {
+        "title": "[Savory Recipe Name 1]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      },
+      {
+        "title": "[Savory Recipe Name 2]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      }
+    ]
+  },
+  "six": {
+    "title": "Savory Bites",
+    "icon": "pizza.gif",
+    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "content": [
+      {
+        "title": "[Savory Recipe Name 1]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      },
+      {
+        "title": "[Savory Recipe Name 2]",
+        "image": "/[path-to-image]",
+        "steps": [
+          "look at a pig",
+          "eat some bacon",
+          "drink some orange juice",
+          "thank that pig"
+        ]
+      }
+    ]
+  }
 }
