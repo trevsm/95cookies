@@ -90,19 +90,14 @@ function App() {
     let order = getLocal("order")
     let position = getLocal("position")
 
-    //delete item in window list
     delete windows[item]
-
-    //delete item in order
-    let index = order.indexOf(item)
-
-    order.splice(index, 1)
-
-    //delete item position
-    delete position[item]
-
     setLocal("windows", windows)
+
+    let index = order.indexOf(item)
+    order.splice(index, 1)
     setLocal("order", order)
+
+    delete position[item]
     setLocal("position", position)
 
     syncStateWithLocal()
@@ -114,13 +109,7 @@ function App() {
       setLocal("order", ["welcome"])
       setLocal("position", {
         "welcome": {
-          active: false,
-          currentX: 0,
-          currentY: 0,
-          initialX: 0,
-          initialY: 0,
-          xOffset: 0,
-          yOffset: 0
+          x: 0, y: 0
         }
       })
     }
