@@ -35,7 +35,7 @@ function App() {
     return getLocal(category)[name]
   }
 
-  const editItem = (category, name, value) => {
+  const editItem = (category, name, value = "") => {
     if (localStorageExists()) {
       switch (category) {
         case "windows":
@@ -50,9 +50,8 @@ function App() {
             orderIndex = order.indexOf(name)
 
           if (orderIndex !== -1) {
-            console.log(order)
-            console.log(order.splice(orderIndex, 1))
-            console.log(order.push(name))
+            order.splice(orderIndex, 1)
+            order.push(name)
           }
 
           setLocal("order", order)
@@ -77,7 +76,7 @@ function App() {
       let order = getLocal("order")
 
       windows[name] = { title: name }
-      order.unshift(name)
+      order.push(name)
 
       setLocal("windows", windows)
       setLocal("order", order)

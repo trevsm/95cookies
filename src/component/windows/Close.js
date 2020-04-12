@@ -9,7 +9,7 @@ function Close(props) {
     return (
         <div 
         className="default pop-border closeBtn"
-        onClick={closeWindow}>
+        onMouseDown={closeWindow}>
             x
         </div>
     )
