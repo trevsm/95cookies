@@ -5,22 +5,9 @@ import Close from "./Close"
 function Window(props) {
     const c = useContext(Context)
 
-    let w = window.localStorage.getItem([props.id])
-    if (!w) {
-        w =
-        {
-            active: false,
-            currentX: 0,
-            currentY: 0,
-            initialX: 0,
-            initialY: 0,
-            xOffset: 0,
-            yOffset: 0
-        }
-    } else {
-        w = JSON.parse(w)
-    }
+    let w = c.getItem("position", [props.id])
 
+    console.log(w)
 
     const topWindow = (e) => {
         let id = e.target.getAttribute("data-id")
@@ -53,7 +40,9 @@ function Window(props) {
         w["initialY"] = w["currentY"];
 
         w["active"] = false
-        window.localStorage.setItem([props.id], JSON.stringify(w))
+
+        console.log(w)
+        c.editItem("position", props.id, w)
     }
 
     const drag = (e, dragItem) => {

@@ -33,16 +33,34 @@ function App() {
     return getLocal(category)[name]
   }
 
-  const addItem = (name, value) => {
-    let windows = getLocal("windows")
-    let order = getLocal("order")
+  const editItem = (category, name, value) => {
+    switch (category) {
+      case "windows":
+        let windows = getLocal("windows")
 
-    windows[name] = value
-    order.unshift("item")
+        windows[name] = value
+        setLocal("windows", windows)
+        break;
 
-    setLocal("windows", windows)
-    setLocal("order", order)
+      case "order":
+        let order = getLocal("order"),
+          orderIndex = order.indexOf(name)
 
+        if (orderIndex === -1) {
+          order.unshift(name)
+          setLocal("order", order)
+        }
+        break;
+
+      case "position":
+        let position = getLocal("position")
+        position[name] = value
+        setLocal("position", position)
+        break;
+
+      default:
+        window.Error("Item type does not exist.")
+    }
     syncStateWithLocal()
   }
 
@@ -115,7 +133,7 @@ function App() {
       windows: windows, setWindows: setWindows,
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
       windowOrder: windowOrder, setWindowOrder: setWindowOrder,
-      windowPos: windowPos, addItem: addItem,
+      windowPos: windowPos, editItem: editItem,
       getItem: getItem, deleteItem: deleteItem
     }}>
       <section className="hero is-success is-fullheight">
