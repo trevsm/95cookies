@@ -1,5 +1,6 @@
 import React, { useContext } from "react"
 import { Context } from "../context/Context"
+import Icon from "../icons/Icons"
 import "./applications.scss"
 
 function Applications() {
@@ -35,7 +36,10 @@ function Applications() {
                             }
                             data-id={key}
                             onMouseDown={(e) => { topWindow(e) }}>
+                            <Icon path={"cookie.png"}/>
+                            <div className="application-title">
                             {val.title}
+                            </div>
                         </div>)
                 })
             }

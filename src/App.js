@@ -74,12 +74,16 @@ function App() {
     if (localStorageExists() && !itemAlreadyExists(name)) {
       let windows = getLocal("windows")
       let order = getLocal("order")
+      let position = getLocal("position")
 
       windows[name] = { title: name }
+      position[name] = { x: 0, y: 0 }
       order.push(name)
+
 
       setLocal("windows", windows)
       setLocal("order", order)
+      setLocal("position", position)
 
       syncStateWithLocal()
     }
@@ -153,8 +157,8 @@ function App() {
       menuStatus: menuStatus, setMenuStatus: setMenuStatus,
       windowOrder: windowOrder, setWindowOrder: setWindowOrder,
       windowPos: windowPos, editItem: editItem, addItem: addItem,
-      getItem: getItem, deleteItem: deleteItem,
-      data: data
+      getItem: getItem, deleteItem: deleteItem, 
+      data: data, syncStateWithLocal: syncStateWithLocal
     }}>
       <section className="hero is-success is-fullheight">
         <div className="hero-body">

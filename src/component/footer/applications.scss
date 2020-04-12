@@ -1,15 +1,20 @@
 .applications {
   display: flex;
-
   width: 100%;
   min-width: 100px;
   .btn {
     overflow: hidden;
-
     width: 100%;
     max-width: 260px;
-    padding-left: 10px;
-
+    padding-left: 4px;
+    display: flex;
     text-overflow: ellipsis;
+    * {
+      pointer-events: none;
+    }
+    .Icon {
+      width: 20px;
+      margin-top: 4px;
+    }
   }
 }

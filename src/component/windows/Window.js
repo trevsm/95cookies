@@ -8,11 +8,8 @@ function Window(props) {
 
     let xy = c.getItem("position", [props.id])
 
-    if (!xy)
-        xy = { x: 0, y: 0 }
-
     const topWindow = () => {
-        props.c.editItem("order", props.id)
+        c.editItem("order", props.id)
     }
 
     const notOnTheTop = () => {
@@ -27,8 +24,8 @@ function Window(props) {
 
 
     useEffect(() => {
-
-    }, [])
+        console.log("repainting")
+    })
 
     return (
         <Draggable
