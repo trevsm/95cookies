@@ -106,7 +106,7 @@ function Window(props) {
                         if (notOnTheTop())
                             topWindow(e)
 
-                        //props.c.editItem("position", props.id, w)
+                       //props.c.editItem("position", props.id, w)
                     }}
                     //onMouseUp={dragEnd}
                     onMouseMove={(e) => {
