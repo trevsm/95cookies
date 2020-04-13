@@ -1,56 +1,56 @@
 .window {
   position: absolute;
+  margin: 3px;
   left: 0;
   right: 0;
   top: 50px;
-  margin: 0 auto;
-  width:fit-content;
+  width: fit-content;
   min-width: fit-content;
   overflow: auto;
-  .header{
-      padding:2px 5px;
-      display:flex;
-      font-size: 15px;
-      pointer-events: none;
-      background-color: #808080;
+  .header {
+    padding: 2px 5px;
+    display: flex;
+    font-size: 15px;
+    background-color: #808080;
   }
-  .header.top{
-      background-color: #000080;
-      color:white;
+  .header.top {
+    background-color: #000080;
+    color: white;
   }
-  .title{
-    padding:20px;
-    margin:0 !important;
-    width:fit-content;
-    color:black !important;
+  .title {
+    padding: 20px;
+    margin: 0 !important;
+    width: fit-content;
+    color: black !important;
   }
-  .main-content{
-    max-width:600px;
-    width:600px;
-    padding:25px;
-    margin:unset;
-    .main{
-      display:flex;
-      .left, .right{
-        padding:10px;
+  .main-content {
+    max-width: 600px;
+    width: 600px;
+    padding: 25px;
+    margin: unset;
+    .main {
+      display: flex;
+      .left,
+      .right {
+        padding: 10px;
       }
-      .left{
-        width:70%;
+      .left {
+        width: 70%;
       }
-      .right{
-        width:30%;
+      .right {
+        width: 30%;
       }
     }
   }
 }
 
-.closeBtn{
+.closeBtn {
   pointer-events: all;
-  position:absolute;
-  right:3px;
-  width:fit-content;
-  padding:3px;
-  height:15px;
+  position: absolute;
+  right: 3px;
+  width: fit-content;
+  padding: 3px;
+  height: 15px;
   line-height: 5px;
-  margin:3px
+  margin: 3px;
 }

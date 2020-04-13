@@ -20,7 +20,7 @@ function Windows() {
                     }
 
                     return (
-                        <div key={index}>
+                        
                             <Window
                                 pos={pos}
                                 id={key}
@@ -29,7 +29,7 @@ function Windows() {
                                 temp={c.windows}
                                 title={c.windows[key].title}
                                  />
-                        </div>
+                     
                     )
                 })
             }

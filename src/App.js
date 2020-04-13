@@ -114,13 +114,15 @@ function App() {
       setLocal("order", ["welcome"])
       setLocal("position", {
         "welcome": {
-          active: false,
-          currentX: 0,
-          currentY: 0,
-          initialX: 0,
-          initialY: 0,
-          xOffset: 0,
-          yOffset: 0
+          // active: false,
+          // currentX: 0,
+          // currentY: 0,
+          // initialX: 0,
+          // initialY: 0,
+          // xOffset: 0,
+          // yOffset: 0
+          x: 0,
+          y: 0
         }
       })
     }
