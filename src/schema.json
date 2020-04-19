@@ -8,7 +8,7 @@
         "title": "Find recipes for the food you forgot existed.",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
@@ -21,13 +21,13 @@
         "title": "[Sweet Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Sweet Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
@@ -40,13 +40,13 @@
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
@@ -59,13 +59,13 @@
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
@@ -78,32 +78,29 @@
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
-  "all": {
-    "application": "All Recipes",
+  "authors": {
+    "application": "Authors",
     "icon": "scroll.png",
     "subtitle": "EVERY RECIPE EVER... I wish lol",
+    "type": "grid",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "image": "/[path-to-image]"
       },
       {
         "title": "[Savory Recipe Name 2]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "image": "/[path-to-image]"
       }
     ]
   }
