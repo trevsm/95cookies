@@ -1,4 +1,4 @@
-*{
+* {
   user-select: none;
 }
 
@@ -6,77 +6,81 @@ html {
   overflow: hidden;
 }
 
+ul {
+  margin-left: 35px;
+}
+
+li {
+  list-style-type: decimal;
+  padding: 10px;
+}
+
 .hero.is-success {
   overflow: hidden;
+
   background-color: #008083;
 }
 
-.default{
-  font-size: 15pt;
-  -webkit-font-smoothing : none;
-  font-family: monospace;
-  color:black;
+.default {
+  color: black;
   background-color: #c0c0c0;
+
+  font-family: monospace;
+  font-size: 15pt;
+
+  -webkit-font-smoothing: none;
 }
 
-.yellow{
+.yellow {
   background-color: #fcfce2;
 }
 
-.pop-border-main{
-  box-shadow:
-  -1px -1px 0px 1px #fffffe, 
-  -3px -3px 0px 1px #abc9cb, 
-  1px -1px 0px 1px #7e7e7c, 
-  -1px 1px 0px 1px #7e7e7c, 
-  1px 1px 0px 1px #7e7e7c, 
-  -3px 1px 0px 1px #abc9cb,
-  1px -3px 0px 1px #abc9cb, 
-  2px 2px 0px 1px #010303, 
-  0px 0px 0px 4px #010303,
-  0 0 7px rgba(0,0,0,.9);
+.pop-border-main {
+  box-shadow: -1px -1px 0px 1px #fffffe, -3px -3px 0px 1px #abc9cb,
+    1px -1px 0px 1px #7e7e7c, -1px 1px 0px 1px #7e7e7c, 1px 1px 0px 1px #7e7e7c,
+    -3px 1px 0px 1px #abc9cb, 1px -3px 0px 1px #abc9cb, 2px 2px 0px 1px #010303,
+    0px 0px 0px 4px #010303, 0 0 7px rgba(0, 0, 0, 0.9);
 }
 
 .pop-border {
-    box-shadow: 
-    1px 1px 0px 1px #7e7e7c, 
-    3px 3px 0px 1px #010303, 
-    -1px 1px 0px 1px #e6e6e6, 
-    -1px 3px 0px 1px #010303, 
-    1px -1px 0px 1px #e6e6e6, 
-    3px -1px 0px 1px #010303, 
-    -1px -1px 0px 1px #e6e6e6;
+  box-shadow: 1px 1px 0px 1px #7e7e7c, 3px 3px 0px 1px #010303,
+    -1px 1px 0px 1px #e6e6e6, -1px 3px 0px 1px #010303, 1px -1px 0px 1px #e6e6e6,
+    3px -1px 0px 1px #010303, -1px -1px 0px 1px #e6e6e6;
 }
 
-.in-border-hard{
-  background-color: #FFF;
-    background-size: 2px 2px;
-    background-position: 0 0, 25px 25px;
-    background-image: 
-    linear-gradient(45deg, #b3b3b3 25%, transparent 25%, transparent 75%, #b3b3b3 75%, #b3b3b3), 
-    linear-gradient(45deg, #b3b3b3 25%, transparent 25%, transparent 75%, #b3b3b3 75%, #b3b3b3);
-
-  box-shadow: 
-    1px 1px 0px 1px #d7d7d6, 
-    3px 3px 0px 1px #ececec, 
-    -1px 1px 0px 1px #5a5a59, 
-    -1px 3px 0px 1px #ececec, 
-    1px -1px 0px 1px #5a5a59, 
-    3px -1px 0px 1px #ececec, 
-    -1px -1px 0px 1px #5a5a59;
+.in-border-hard {
+  background-color: #fff;
+  background-image: linear-gradient(
+      45deg,
+      #b3b3b3 25%,
+      transparent 25%,
+      transparent 75%,
+      #b3b3b3 75%,
+      #b3b3b3
+    ),
+    linear-gradient(
+      45deg,
+      #b3b3b3 25%,
+      transparent 25%,
+      transparent 75%,
+      #b3b3b3 75%,
+      #b3b3b3
+    );
+  background-position: 0 0, 25px 25px;
+  background-size: 2px 2px;
+  box-shadow: 1px 1px 0px 1px #d7d7d6, 3px 3px 0px 1px #ececec,
+    -1px 1px 0px 1px #5a5a59, -1px 3px 0px 1px #ececec, 1px -1px 0px 1px #5a5a59,
+    3px -1px 0px 1px #ececec, -1px -1px 0px 1px #5a5a59;
 }
 
-.in-border-hard.start-menu{
+.in-border-hard.start-menu {
   background: unset;
 }
 
-.in-border-soft{
-  box-shadow:
-  -1px -1px 0px 1px #9f9ca0, 
-  1px 1px 0px 1px #dddddd;
+.in-border-soft {
+  box-shadow: -1px -1px 0px 1px #9f9ca0, 1px 1px 0px 1px #dddddd;
 }
 
-
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }

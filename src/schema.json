@@ -2,108 +2,112 @@
   "welcome": {
     "application": "Welcome",
     "icon": "cookie.png",
-    "subtitle": "Welcome to 95Cookies!",
+    "shout": "95Cookies ˁ(⦿ᴥ⦿)ˀ",
     "content": [
       {
-        "title": "Find recipes for the food you forgot existed.",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "title": "Start making the food you forgot existed!",
+        "image": "pizza.gif",
+        "description": "It's super easy!",
+        "steps": [
+          "Open the start menu to see our content",
+          "Click an icon",
+          "Enjoy"
+        ]
       }
     ]
   },
   "sweet": {
     "application": "Tasty Treats",
     "icon": "donut.gif",
-    "subtitle": "Gimme some of that swEEt swEEt sugar!",
+    "shout": "Gimme some of that swEEt swEEt sugar!",
     "content": [
       {
         "title": "[Sweet Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Sweet Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "savory": {
     "application": "Savory Bites",
     "icon": "pizza.gif",
-    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "shout": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "fizz": {
     "application": "Fancy Fizz",
     "icon": "drink.gif",
-    "subtitle": "pop pop fizz fizz... yup its soda",
+    "shout": "pop pop fizz fizz... yup its soda",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "fruit": {
     "application": "Juicy Fruit",
     "icon": "grapes.gif",
-    "subtitle": "So good you can almost taste it!",
+    "shout": "So good you can almost taste it!",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "all": {
     "application": "All Recipes",
     "icon": "scroll.png",
-    "subtitle": "EVERY RECIPE EVER... I wish lol",
+    "shout": "EVERY RECIPE EVER... I wish lol",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   }
