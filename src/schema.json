@@ -2,12 +2,11 @@
   "welcome": {
     "application": "Welcome",
     "icon": "cookie.png",
-    "type": "",
+    "type": "default",
     "shout": "95Cookies ˁ(⦿ᴥ⦿)ˀ",
     "content": [
       {
         "title": "Start making the food you forgot existed!",
-        "image": "pizza.gif",
         "description": "Have you ever said to yourself: \"I cant remember the last time I've had a honest to goodness authentic German schnitzel.\" No? Eh. Thats okay, we don't have any schnitzel recipes... BUT we guarentee we have some food you will love! Get ready! Get nostalgic!",
         "steps": [
           "Open the start menu to see our content",
@@ -20,7 +19,7 @@
   "sweet": {
     "application": "Tasty Treats",
     "icon": "donut.gif",
-    "type": "",
+    "type": "default",
     "shout": "Gimme some of that swEEt swEEt sugar!",
     "content": [
       {
@@ -48,7 +47,7 @@
   "savory": {
     "application": "Savory Bites",
     "icon": "pizza.gif",
-    "type": "",
+    "type": "default",
     "shout": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
     "content": [
       {
@@ -125,18 +124,31 @@
     "application": "Juicy News",
     "icon": "grapes.gif",
     "shout": "Straight from the grapevine!",
-    "type": "",
+    "type": "default",
     "content": [
       {
-        "title": "Scraps Are the Only Winners in This Pandemic",
-        "image": "scraps.jpg",
-        "description": "Shopping less often and spending more time at home means cooks around the country have finally come to face down their freezers full of Parmesan cheese rinds, kale stems, and overripe fruit they squirreled away...",
-        "link": "https://www.thekitchn.com/pandemic-scraps-23026603"
+        "title": "Pringles Has New Chicken & Waffles Chips That Combine Sweet And Savory Flavors",
+        "image": "news01.jpg",
+        "description": "Pringles has come out with some pretty interesting flavors in the past. Who remembers that Top Ramen Chicken chips?! The brand’s snacking experts have a new flavor that is also...",
+        "link": "https://www.delish.com/food-news/a32197811/pringles-chicken-and-waffles-flavored-chips/"
       },
       {
-        "title": "[Savory Recipe Name 2]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description"
+        "title": "Checkers & Rally’s Just Started A Free Meal Program For Doctors And Nurses",
+        "image": "news02.jpg",
+        "description": "Checkers & Rally’s just launched a free meal program to support health care workers and first responders who have found themselves on the front line in the fight against...",
+        "link": "https://www.delish.com/food-news/a32197356/checkers-and-rallys-just-started-a-free-meal-program-for-healthcare-workers/"
+      },
+      {
+        "title": "Drumstick Has Super Nugget Ice Cream Cones To Give You More Of That Chocolate Nub",
+        "image": "news03.jpg",
+        "description": "From a convenience standpoint, Nestlé’s Drumsticks really hit the nail on the head. There’s no need to break out the ice cream scooper, because the cone, frozen dairy dessert...",
+        "link": "https://www.delish.com/food-news/a32196086/nestle-drumstick-super-nugget-cones/"
+      },
+      {
+        "title": "McDonald’s New Blueberry Cream Cheese Pie Is Stuffed With Two Sweet Fillings",
+        "image": "news01.jpg",
+        "description": "Another day, another McDonald’s treat we need to get our hands on. The drive-thru is calling our names to come try the new Blueberry Cream Cheese Pie. The only problem? It’s...",
+        "link": "https://www.delish.com/food-news/a32196061/mcdonalds-malaysia-blueberry-cream-cheese-pie/"
       }
     ]
   },

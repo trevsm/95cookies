@@ -109,7 +109,8 @@ function Window(props) {
         {shout(win.shout)}
         <div id={win.type}>
           {win.content.map((val, index) => {
-            if (win.type.includes("default")) return deflt(val, index);
+            if (win.type === "default" || win.type === "column-layout")
+              return deflt(val, index);
             else if (win.type.includes("cards"))
               return (
                 <div className="card" key={index}>
