@@ -2,108 +2,201 @@
   "welcome": {
     "application": "Welcome",
     "icon": "cookie.png",
-    "subtitle": "Welcome to 95Cookies!",
+    "type": "default",
+    "shout": "95Cookies ˁ(⦿ᴥ⦿)ˀ",
     "content": [
       {
-        "title": "Find recipes for the food you forgot existed.",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "title": "Start making the food you forgot existed!",
+        "description": "Have you ever said to yourself: \"I cant remember the last time I've had a honest to goodness authentic German schnitzel.\" No? Eh. Thats okay, we don't have any schnitzel recipes... BUT we guarentee we have some food you will love! Get ready! Get nostalgic!",
+        "steps": [
+          "Open the start menu to see our content",
+          "Click an icon",
+          "Enjoy"
+        ]
       }
     ]
   },
   "sweet": {
     "application": "Tasty Treats",
     "icon": "donut.gif",
-    "subtitle": "Gimme some of that swEEt swEEt sugar!",
+    "type": "default",
+    "shout": "Gimme some of that swEEt swEEt sugar!",
     "content": [
       {
-        "title": "[Sweet Recipe Name 1]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "title": "Broken Glass Candy",
+        "image": "broken-glass-candy.jpg",
+        "description": "Broken glass candy is a gorgeous hard candy that looks like shards of broken glass.",
+        "ingredients": [
+          "1/2 cup water",
+          "3/4 cup light corn syrup",
+          "2 cups sugar",
+          "2 to 4 teaspoons flavoring extract (see note below)",
+          "1/2 teaspoon gel food coloring",
+          "1/2 cup powdered sugar"
+        ],
+        "steps": []
       },
       {
         "title": "[Sweet Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "savory": {
     "application": "Savory Bites",
     "icon": "pizza.gif",
-    "subtitle": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
+    "type": "default",
+    "shout": "So you want some 𝓈𝒶𝓋𝑜𝓇𝓎 goodness do you?",
     "content": [
       {
         "title": "[Savory Recipe Name 1]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       },
       {
         "title": "[Savory Recipe Name 2]",
         "image": "/[path-to-image]",
         "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "steps": ["step1", "step2"]
       }
     ]
   },
   "fizz": {
-    "application": "Fancy Fizz",
+    "application": "Fancy Fizzy Fresh",
     "icon": "drink.gif",
-    "subtitle": "pop pop fizz fizz... yup its soda",
+    "type": "column-layout",
+    "shout": "Fresh articles HEre, fREESh articles!",
     "content": [
       {
-        "title": "[Savory Recipe Name 1]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "linkList": "Pinterest Recipes For Quarantine",
+        "url": "https://www.thekitchn.com/pinterest-top-quarantine-recipes-world-23028653"
       },
       {
-        "title": "[Savory Recipe Name 2]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "linkList": "Fancy Bread Recipes",
+        "url": "https://www.tasteofhome.com/article/heres-why-people-are-so-obsessed-with-sourdough-bread/"
+      },
+      {
+        "linkList": "Disney Grilled Cheese",
+        "url": "https://www.tasteofhome.com/article/disney-grilled-cheese/"
+      },
+      {
+        "linkList": "Chocolate Dream Sickle",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Raspberry Cereal From Scratch",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Caremel Fudge Brownie",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Caremel Fudge Brownie",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Oatmeal Cream Pie",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Lemon Cake For Cheap",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Rainbow Gingerbread",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Super Duper Tiny Pot Pie Snackable",
+        "url": "https://example.com/"
+      },
+      {
+        "linkList": "Button Marshmellow Puffs",
+        "url": "https://example.com/"
       }
     ]
   },
-  "fruit": {
-    "application": "Juicy Fruit",
+  "news": {
+    "application": "Juicy News",
     "icon": "grapes.gif",
-    "subtitle": "So good you can almost taste it!",
+    "shout": "Straight from the grapevine!",
+    "type": "default",
     "content": [
       {
-        "title": "[Savory Recipe Name 1]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "title": "Pringles Has New Chicken & Waffles Chips That Combine Sweet And Savory Flavors",
+        "image": "news01.jpg",
+        "description": "Pringles has come out with some pretty interesting flavors in the past. Who remembers that Top Ramen Chicken chips?! The brand’s snacking experts have a new flavor that is also...",
+        "link": "https://www.delish.com/food-news/a32197811/pringles-chicken-and-waffles-flavored-chips/"
       },
       {
-        "title": "[Savory Recipe Name 2]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "title": "Checkers & Rally’s Just Started A Free Meal Program For Doctors And Nurses",
+        "image": "news02.jpg",
+        "description": "Checkers & Rally’s just launched a free meal program to support health care workers and first responders who have found themselves on the front line in the fight against...",
+        "link": "https://www.delish.com/food-news/a32197356/checkers-and-rallys-just-started-a-free-meal-program-for-healthcare-workers/"
+      },
+      {
+        "title": "Drumstick Has Super Nugget Ice Cream Cones To Give You More Of That Chocolate Nub",
+        "image": "news03.jpg",
+        "description": "From a convenience standpoint, Nestlé’s Drumsticks really hit the nail on the head. There’s no need to break out the ice cream scooper, because the cone, frozen dairy dessert...",
+        "link": "https://www.delish.com/food-news/a32196086/nestle-drumstick-super-nugget-cones/"
+      },
+      {
+        "title": "McDonald’s New Blueberry Cream Cheese Pie Is Stuffed With Two Sweet Fillings",
+        "image": "news01.jpg",
+        "description": "Another day, another McDonald’s treat we need to get our hands on. The drive-thru is calling our names to come try the new Blueberry Cream Cheese Pie. The only problem? It’s...",
+        "link": "https://www.delish.com/food-news/a32196061/mcdonalds-malaysia-blueberry-cream-cheese-pie/"
       }
     ]
   },
-  "all": {
-    "application": "All Recipes",
+  "authors": {
+    "application": "Authors",
     "icon": "scroll.png",
-    "subtitle": "EVERY RECIPE EVER... I wish lol",
+    "shout": "Our faithful authors!",
+    "type": "cards",
     "content": [
       {
-        "title": "[Savory Recipe Name 1]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "name": "Trevor Smith",
+        "color": "gold",
+        "thumb": "cookie.png",
+        "handle": "@tsmith",
+        "description": "\"cookiiiies...\"",
+        "time": "4/21/20 12:30 AM"
       },
       {
-        "title": "[Savory Recipe Name 2]",
-        "image": "/[path-to-image]",
-        "description": "just a super long description",
-        "steps":["step1", "step2"]
+        "name": "Gina Conway",
+        "color": "cornflowerblue",
+        "thumb": "cookie.png",
+        "handle": "@gconway",
+        "description": "“Seeing is believing”",
+        "time": "4/21/20 12:30 AM"
+      },
+      {
+        "name": "Poppy Harlow",
+        "color": "red",
+        "thumb": "cookie.png",
+        "handle": "@pharlow",
+        "description": "“Some quotations,\" said Zellaby, \"are greatly improved by lack of context.”",
+        "time": "4/21/20 12:30 AM"
+      },
+      {
+        "name": "Samuel Appleton",
+        "color": "aquamarine",
+        "thumb": "cookie.png",
+        "handle": "@sappleton",
+        "description": "“Act first, explain later.”",
+        "time": "4/21/20 12:30 AM"
+      },
+      {
+        "name": "Miguel Rees",
+        "color": "seagreen",
+        "thumb": "cookie.png",
+        "handle": "@mrees",
+        "description": "“Insane means fewer cameras!”",
+        "time": "4/21/20 12:30 AM"
       }
     ]
   }
