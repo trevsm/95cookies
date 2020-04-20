@@ -10,8 +10,14 @@ ul {
   margin-left: 35px;
 }
 
-li {
+.disc {
+  list-style-type: disc;
+}
+.decimal {
   list-style-type: decimal;
+}
+
+li {
   padding: 10px;
 }
 

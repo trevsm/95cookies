@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { Context } from "../context/Context";
+import Card from "./Card";
 import Close from "./Close";
 
 function Window(props) {
   const c = useContext(Context);
+
+  let win = c.data[props.id];
 
   let w = c.getItem("position", [props.id]);
 
@@ -99,27 +102,56 @@ function Window(props) {
       }}
     >
       <header className={`header${!notOnTheTop() ? " top" : ""}`}>
-        {c.data[props.id].application}
+        {win.application}
         <Close id={props.id} c={c} w={w} />
       </header>
-      {shout(c.data[props.id].shout)}
-      {c.data[props.id].content.map((val, index) => {
-        return (
-          <div className="main-content" key={index}>
-            {subtitle(val.title)}
-            <div className="main ">
-              <div className="left in-border-soft yellow">
-                {description(val.description)}
-                {steps(val.steps)}
-              </div>
-              <div className="right">{image(val.image)}</div>
-            </div>
-          </div>
-        );
-      })}
+      <div className={`scrollable in-border-hard`}>
+        {shout(win.shout)}
+        <div id={win.type}>
+          {win.content.map((val, index) => {
+            if (win.type.includes("default")) return deflt(val, index);
+            else if (win.type.includes("cards"))
+              return (
+                <div className="card" key={index}>
+                  <Card
+                    color={val.color}
+                    name={val.name}
+                    thumb={val.thumb}
+                    handle={val.handle}
+                    description={val.description}
+                    time={val.time}
+                  />
+                </div>
+              );
+            else return 0;
+          })}
+        </div>
+      </div>
     </div>
   );
 }
+
+let deflt = (val, index) => {
+  return (
+    <div className="main-content" key={index}>
+      {subtitle(val.title)}
+      <div className="main ">
+        {!val.linkList ? (
+          <div className="left in-border-soft yellow">
+            {description(val.description)}
+            {list(val.ingredients, "disc")}
+            {list(val.steps, "disc")}
+          </div>
+        ) : (
+          <a href={val.url} target="new">
+            {val.linkList}
+          </a>
+        )}
+        {val.image ? <div className="right">{image(val.image)}</div> : ""}
+      </div>
+    </div>
+  );
+};
 
 let shout = str => {
   return str ? <h1 className="title">{str}</h1> : "";
@@ -130,10 +162,12 @@ let subtitle = str => {
 };
 
 let image = str => {
-  return (
+  return str ? (
     <div className="image">
-      <img src={`./images/${str}`} alt="image" />
+      <img src={`./images/${str}`} alt="imaged" />
     </div>
+  ) : (
+    ""
   );
 };
 
@@ -141,9 +175,9 @@ let description = str => {
   return str ? <div className="description">{str}</div> : "";
 };
 
-let steps = arr => {
+let list = (arr, type) => {
   return arr ? (
-    <ul>
+    <ul className={type}>
       {arr.map((val, index) => {
         return <li key={index}>{val}</li>;
       })}
