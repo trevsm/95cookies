@@ -1,0 +1,47 @@
+.popup {
+  position: fixed;
+  bottom: -35px;
+  left: 0;
+  right: 0;
+  height: 100px;
+  z-index: 998;
+  background-color: #313131;
+  transition: all 0.35s ease;
+  clip-path: polygon(
+    0 20%,
+    45% 20%,
+    46% 0,
+    54% 0,
+    55% 20%,
+    100% 20%,
+    100% 100%,
+    0 100%
+  );
+  .tab {
+    text-align: center;
+    line-height: 17px;
+    opacity: 0.5;
+  }
+  .tab::before {
+    content: "more";
+  }
+  .social {
+    text-align: center;
+    a {
+      margin: 10px 3px 0 3px;
+    }
+  }
+  .copy {
+    top: -10px;
+    left: 10px;
+    opacity: 0.2;
+    position: relative;
+  }
+}
+
+.popup:hover {
+  bottom: 40px;
+  .tab::before {
+    content: "•";
+  }
+}
