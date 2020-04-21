@@ -112,7 +112,15 @@
 }
 
 #welcome {
+  .title,
+  .main-title {
+    background-color: silver;
+    padding: 5px;
+  }
   .left {
     width: 100%;
+  }
+  .scrollable {
+    background: url("https://img.freepik.com/free-vector/cookies-pattern-background_9845-34.jpg?size=338&ext=jpg");
   }
 }
